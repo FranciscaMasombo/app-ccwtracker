@@ -31,7 +31,7 @@ app.get('/subs/:id', subs.findoneSub);
 //posts
 app.post('/subs',subs.addsub);
 //puts
-app.put('/subs:id',subs.updatesub);
+app.put('/subs/:id',subs.updatesub);
 //deletes
 app.delete('/subs/:id',subs.deleteSub);
 

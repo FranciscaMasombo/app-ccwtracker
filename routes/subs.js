@@ -59,21 +59,23 @@ Sub.find({"_id": req.params.id},function (err, sub) {
 }
 
 //UPDATE
+//update a submission
 router.updatesub =  (req, res) => {
 
-    Sub.findByIdAndUpdate(req.params.id,req.body, function(err) {
-        if (err)
-            res.json({ message: 'Donation NOT DELETED!', errmsg : err } );
+    Sub.findByIdAndUpdate(req.params.id,req.body).then(function(sub) {
 
-        else
-            res.json({ message: 'Donation Successfully Deleted!'});
-        Sub.findOne(req.params.id).then()
-        res.send(sub);
+
+          res.setHeader('Content-Type', 'application/json');
+          res.send(JSON.stringify(sub,null,5));
+
+
     });
+
 }
-//update a submission
+
 
 //DELETE
+// delete on submistion
 router.deleteSub =  (req, res) => {
 
     Sub.findByIdAndRemove(req.params.id, function(err) {
