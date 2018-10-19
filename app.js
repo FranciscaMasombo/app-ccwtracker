@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+const subs = require("./routes/subs");
 var app = express();
 
 // view engine setup
@@ -21,6 +22,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+// Custom Routes
+//gets
+app.get('/subs', subs.displayAll);
+app.get('/subs/:id', subs.findoneSub);
+
+//posts
+app.post('/subs',subs.addsub);
+//puts
+app.put('/subs:id',subs.updatesub);
+//deletes
+app.delete('/subs/:id',subs.deleteSub);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
