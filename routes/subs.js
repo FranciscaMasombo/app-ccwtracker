@@ -27,6 +27,7 @@ router.addsub = (req, res) => {
     sub.cw = req.body.cw;// the requested value
     sub.height = req.body.height;// the requested value
     sub.location = req.body.location;// the requested value
+    sub.date= req.body.date;// the requested value
     sub.save(function(err) {
         if (err)
             res.json({ message: 'Donation NOT Added!', errmsg : err } );
@@ -34,8 +35,7 @@ router.addsub = (req, res) => {
         res.json({ message: 'Donation Successfully Added!', data: sub });
         // return a suitable success message
     });
-}
-
+};
 //READ
 
 //get a list of all the submissions
@@ -48,15 +48,33 @@ if(err)
     });
 };
 
+router.displayAllByDate=(req,res)=>{
+    var mysort = {name: -1};
+    res.setHeader('Content-Type', 'application/json');
+    Sub.find( function (err,subs) { if(err) res.send(err);
+        res.send(JSON.stringify(subs,null,3));
+    }).sort(mysort);
+};
+
+
 //get a single submission
 router.findoneSub=(req,res)=> {
     res.setHeader('Content-Type', 'application/json');
 Sub.find({"_id": req.params.id},function (err, sub) {
     if (err != null)
         res.send(" no here");
-    else res.send(JSON.stringify(sub,null,5));
+    else
+        res.send(JSON.stringify(sub,null,5));
 });
-}
+};
+
+// search for a submission by location
+router.findByLocation=(req,res)=> {
+    res.setHeader('Content-Type', 'application/json');
+    Sub.find({location: req.params.location}, 'location name  age', function (err, sub)
+    {res.send(JSON.stringify(sub,null,5));
+    })
+};
 
 //UPDATE
 //update a submission
@@ -71,8 +89,7 @@ router.updatesub =  (req, res) => {
 
     });
 
-}
-
+};
 
 //DELETE
 // delete on submistion
@@ -84,5 +101,5 @@ router.deleteSub =  (req, res) => {
         else
             res.json({ message: 'Donation Successfully Deleted!'});
     });
-}
+};
 module.exports = router;

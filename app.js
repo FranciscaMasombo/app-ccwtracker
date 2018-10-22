@@ -27,7 +27,8 @@ app.use('/users', usersRouter);
 //gets
 app.get('/subs', subs.displayAll);
 app.get('/subs/:id', subs.findoneSub);
-
+app.get('/subs/location/:location', subs.findByLocation);
+app.get('/all', subs.displayAllByDate);
 //posts
 app.post('/subs',subs.addsub);
 //puts

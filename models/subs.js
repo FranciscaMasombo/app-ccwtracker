@@ -1,13 +1,13 @@
 let mongoose = require('mongoose');
 let wwtdbschema =  new mongoose.Schema({
         name: String,
-        age: Number,
+        age: { type: Number, min: 1, max: 65 },
         gender: String,
         sw: Number,
         gW: Number,
         cw: Number,
         Height: Number,
         location: String,
-        upvotes: {type: Number, default: 0}
+        date: { type: Date, default: Date.now },
     }, {collection: 'wwtdb'});
 module.exports= mongoose.model('sub', wwtdbschema);
