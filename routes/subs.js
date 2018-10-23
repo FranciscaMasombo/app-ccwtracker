@@ -55,8 +55,6 @@ router.displayAllByDate=(req,res)=>{
         res.send(JSON.stringify(subs,null,3));
     }).sort(mysort);
 };
-
-
 //get a single submission
 router.findoneSub=(req,res)=> {
     res.setHeader('Content-Type', 'application/json');
