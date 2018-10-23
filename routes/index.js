@@ -1,5 +1,20 @@
 var express = require('express');
 var router = express.Router();
+let user= require('../models/user');
+
+
+var mongodbUri ='mongodb://admin:welcome1@ds135653.mlab.com:35653/users';
+mongoose.connect(mongodbUri);
+let db = mongoose.connection;
+
+db.on('error', function (err) {
+    console.log('Unable to Connect to [ ' + db.name + ' ]', err);
+});
+
+db.once('open', function () {
+    console.log('Successfully Connected to [ ' + db.name + ' ]');
+});
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
