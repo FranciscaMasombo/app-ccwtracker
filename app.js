@@ -8,7 +8,23 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const subs = require("./routes/subs");
+
 var app = express();
+
+var session = require('express-session');
+
+let mongoose = require('mongoose');
+var mongodbUri ='mongodb://admin:welcome1@ds135653.mlab.com:35653/wwtdb';
+mongoose.connect(mongodbUri);
+let db = mongoose.connection;
+
+db.on('error', function (err) {
+    console.log('Unable to Connect to [ ' + db.name + ' ]', err);
+});
+
+db.once('open', function () {
+    console.log('Successfully Connected to [ ' + db.name + ' ]');
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,9 +35,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(session({
+    secret: 'botnyuserdetails', // session secret
+    resave: true,
+    saveUninitialized: true
+}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 
 // Custom Routes
 //gets

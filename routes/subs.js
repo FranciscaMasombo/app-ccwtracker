@@ -1,20 +1,6 @@
 let Sub= require('../models/subs');
 let express= require('express');
 let router= express.Router();
-let mongoose = require('mongoose');
-
-var mongodbUri ='mongodb://admin:welcome1@ds135653.mlab.com:35653/wwtdb';
-mongoose.connect(mongodbUri);
-let db = mongoose.connection;
-
-db.on('error', function (err) {
-    console.log('Unable to Connect to [ ' + db.name + ' ]', err);
-});
-
-db.once('open', function () {
-    console.log('Successfully Connected to [ ' + db.name + ' ]');
-});
-
 //CREATE
 router.addsub = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
@@ -39,14 +25,29 @@ router.addsub = (req, res) => {
 //READ
 
 //get a list of all the submissions
+// router.displayAll=(req,res)=>{
+//     res.setHeader('Content-Type', 'application/json');
+//     Sub.find(function (err,subs) {
+// if(err)
+//     res.send(err);
+//         res.send(JSON.stringify(subs,null,3));
+//     });
+// };
+
 router.displayAll=(req,res)=>{
-    res.setHeader('Content-Type', 'application/json');
-    Sub.find(function (err,subs) {
-if(err)
-    res.send(err);
-        res.send(JSON.stringify(subs,null,3));
-    });
+    if(!req.session.user){
+        return res.status(401).send();
+    }
+    else {
+        res.setHeader('Content-Type', 'application/json');
+        Sub.find(function (err, subs) {
+            if (err)
+                res.send(err);
+            res.send(JSON.stringify(subs, null, 3));
+        });
+    }
 };
+
 
 router.displayAllByDate=(req,res)=>{
     var mysort = {name: -1};
