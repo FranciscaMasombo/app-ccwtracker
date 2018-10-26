@@ -1,0 +1,312 @@
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T051547.200.json
+
+###
+
+POST http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T051534.200.json
+
+###
+
+POST http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T050650.500.json
+
+###
+
+POST http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T050642.500.json
+
+###
+
+GET http://localhost:3000
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040725.200.html
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040720.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040602-1.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040602.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040601.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040600.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040559.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040558-2.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040558-1.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040558.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type:: application/json
+
+<> 2018-10-18T040557.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json:
+
+<> 2018-10-18T040524.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T040426.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T035525.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T035523.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T035307.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T035228.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T034300.200.json
+
+###
+
+GET http://localhost:3000/sub
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T034255.404.html
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T034253.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T034248.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T034209.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033948.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033824.200.json
+
+###
+
+GET http://localhost:3000/sub
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033803.404.html
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033759.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033539.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033538-2.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033538-1.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033538.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033536.200.json
+
+###
+
+GET http://localhost:3000/subs
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033327.200.json
+
+###
+
+GET http://localhost:3000
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-18T033320.200.html
+
+###
+
