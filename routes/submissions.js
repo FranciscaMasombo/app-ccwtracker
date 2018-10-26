@@ -57,7 +57,7 @@ router.displayAllByDate = (req, res) => {
   }
   else
   {
-    var mysort = {name: -1}
+    var mysort = {date: -1}
   res.setHeader('Content-Type', 'application/json')
   Sub.find(function (err, subs) {
     if (err) res.send(err)
