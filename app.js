@@ -46,16 +46,16 @@ app.use('/users', usersRouter);
 
 // Custom Routes
 //gets
-app.get('/submissions', subs.displayAll);
-app.get('/submission/:id', subs.findSubmissionById);
+app.get('/listSubmissions', subs.displayAll);
+app.get('/listOneSubmission/:id', subs.findSubmissionById);
 app.get('/findByLocation/:location', subs.findByLocation);
 app.get('/all', subs.displayAllByDate);
 //posts
 app.post('/add-submission',subs.addSubmissions);
 //puts
-app.put('/update/:id',subs.updateSubmission);
+app.put('/update-submission/:id',subs.updateSubmission);
 //deletes
-app.delete('/delete/:id',subs.deleteSubmission);
+app.delete('/delete-submission/:id',subs.deleteSubmission);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

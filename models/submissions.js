@@ -6,7 +6,7 @@ let wwtdbschema =  new mongoose.Schema({
         startWeight: { type:Number, required: true },
         goalWeight:{ type:Number, required: true },
         currentWeight:{ type:Number, required: true},
-        Height:{ type:Number},
+        height:{ type:Number},
         location:{ type:String, required: true },
         date: { type: Date, default: Date.now, },
 
