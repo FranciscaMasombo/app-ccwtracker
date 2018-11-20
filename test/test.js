@@ -87,3 +87,4 @@ testUser.save(function(err) {
             console.log('123Password:', isMatch); // -> 123Password: false
         });
     });
+
