@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors')
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -10,12 +12,20 @@ var usersRouter = require('./routes/users');
 const subs = require("./routes/submissions");
 
 var app = express();
-
+app.use(cors())
 var session = require('express-session');
 
 let mongoose = require('mongoose');
-var mongodbUri ='mongodb://admin:welcome1@ds135653.mlab.com:35653/wwtdb';
-mongoose.connect(mongodbUri);
+
+var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
+    replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } },
+    user: 'admin', pass: 'welcome1' };
+
+// var mongodbUri ='mongodb://admin:welcome1@ds135653.mlab.com:35653/wwtdb';
+var mongodbUri = 'mongodb://ds123844.mlab.com:23844/heroku_j0mcv66c';
+//var mongooseUri =require('mongodb-uri').formatMongoose(mongodbUri);
+mongoose.connect(mongodbUri,options);
+//mongoose.connect(mongodbUri);
 let db = mongoose.connection;
 
 db.on('error', function (err) {
