@@ -45,7 +45,7 @@ router.displayAll = (req, res) => {
     Sub.find(function (err, subs) {
       if (err)
         res.send(err)
-      res.send(JSON.stringify(subs, null, 3))
+      res.send(subs)
     })
   }
 }

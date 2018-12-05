@@ -10,5 +10,5 @@ let wwtdbschema =  new mongoose.Schema({
         location:{ type:String, required: true },
         date: { type: Date, default: Date.now, },
 
-    }, {collection: 'wwtdb'});
+    }, {collection: 'subs'});
 module.exports= mongoose.model('sub', wwtdbschema);
